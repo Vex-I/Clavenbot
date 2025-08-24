@@ -1,4 +1,4 @@
-
+![Clavenbot GIF](./Assets/Clavenbot%20Icon%20Circular.gif)
 
 # Clavenbot
 
