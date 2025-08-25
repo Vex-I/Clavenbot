@@ -3,7 +3,7 @@
 # Clavenbot
 
 <p>
-This is a simple discord bot that I made for Clavo-gaming Discord server. Most of the planned features are Minecraft-related, with basic integration with MojangAPI and the server itself.
+This is a simple discord bot that I made for Clavo-gaming Discord server. Most of the planned features are Minecraft-related, with basic integration with MojangAPI and the minecraft server itself.
 </p>
 <p>Feel free to contribute as neccessary.</p>
 
@@ -13,8 +13,9 @@ This is a simple discord bot that I made for Clavo-gaming Discord server. Most o
   <li>Coordinate Logging</li>
   <li>Server Status Query</li>
   <li>Displaying the Minecraft Meme of the Day</li>
-  <li>Account Lookup</li>
+  <li>Mojang Account Lookup</li>
 </ul>
+<p>The bot will be deployed in Heroku.</p>
 <hr/>
 
 <p>
