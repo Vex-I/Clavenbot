@@ -15,7 +15,7 @@ This is a simple discord bot that I made for Clavo-gaming Discord server. Most o
   <li>Displaying the Minecraft Meme of the Day</li>
   <li>Mojang Account Lookup</li>
 </ul>
-<p>The bot will be deployed in Heroku.</p>
+<p>The bot is deployed in <a href="https://render.com/">Render.com</a></p>
 <hr/>
 
 <p>
