@@ -153,25 +153,29 @@ class DiscordBot(commands.Bot):
         """
         The code in this function is executed whenever the bot will start.
         """
+        print("load_cogs ran")
         for file in os.listdir(f"{os.path.realpath(os.path.dirname(__file__))}/cogs"):
             if file.endswith(".py"):
                 extension = file[:-3]
                 try:
                     await self.load_extension(f"cogs.{extension}")
                     self.logger.info(f"Loaded extension '{extension}'")
+                    print(f"Loaded extension '{extension}'")
                 except Exception as e:
                     exception = f"{type(e).__name__}: {e}"
                     self.logger.error(
                         f"Failed to load extension {extension}\n{exception}"
                     )
+                    print(f"Failed to load extension {extension}\n{exception}")
+
 
     @tasks.loop(minutes=1.0)
     async def status_task(self) -> None:
         """
         Setup the game status task of the bot.
         """
-        statuses = ["with you!", "with Krypton!", "with humans!"]
-        await self.change_presence(activity=discord.Game(random.choice(statuses)))
+        status = "with Bugs"
+        await self.change_presence(activity=discord.Game(status))
 
     @status_task.before_loop
     async def before_status_task(self) -> None:
@@ -184,6 +188,7 @@ class DiscordBot(commands.Bot):
         """
         This will just be executed when the bot starts the first time.
         """
+        print("setup_hook ran")
         self.logger.info(f"Logged in as {self.user.name}")
         self.logger.info(f"discord.py API version: {discord.__version__}")
         self.logger.info(f"Python version: {platform.python_version()}")
@@ -285,5 +290,10 @@ class DiscordBot(commands.Bot):
             raise error
 
 
+print("Succesfully logged-in")
 bot = DiscordBot()
 bot.run(os.getenv("TOKEN"))
+@bot.event
+async def on_ready():
+    await bot.tree.sync()
+    
