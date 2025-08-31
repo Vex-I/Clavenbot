@@ -1,8 +1,9 @@
-CREATE TABLE IF NOT EXISTS `warns` (
-  `id` int(11) NOT NULL,
-  `user_id` varchar(20) NOT NULL,
-  `server_id` varchar(20) NOT NULL,
-  `moderator_id` varchar(20) NOT NULL,
-  `reason` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE IF NOT EXISTS mc_logs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id TEXT NOT NULL,
+    x INTEGER NOT NULL,
+    y INTEGER NOT NULL,
+    z INTEGER NOT NULL,
+    description TEXT,
+    created_at TEXT DEFAULT (datetime('now'))
 );

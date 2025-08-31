@@ -1,13 +1,15 @@
 
 from discord.ext import commands
 from discord.ext.commands import Context
+from dotenv import load_dotenv
 import discord
 import praw
 import random
 import os
 
+load_dotenv()
 
-class Template(commands.Cog, name="memeoftheday"):
+class MemeOFTheDay(commands.Cog, name="memeoftheday"):
     """
     A cog that retrieves a random meme from r/memes.
     """
@@ -44,4 +46,4 @@ class Template(commands.Cog, name="memeoftheday"):
 
 
 async def setup(bot) -> None:
-    await bot.add_cog(Template(bot))
+    await bot.add_cog(MemeOFTheDay(bot))
