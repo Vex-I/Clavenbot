@@ -1,4 +1,6 @@
-![Clavenbot GIF](./Assets/Clavenbot%20Icon%20Circular.gif)
+<p align="center">
+  <img src="./Assets/Clavenbot Icon Circular.gif" alt="Clavenbot GIF" />
+</p>
 
 # Clavenbot
 
